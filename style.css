@@ -1,0 +1,261 @@
+:root{
+    --fondo:#F3F5FC;
+    --gris:#495057;
+    --principal:#0A3871;
+    --secundario:#D8DFE8;
+
+}
+
+body{
+    background: var(--fondo);
+}
+main{
+    
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Esto es lo que va a la izquierda*/
+
+.logo{
+    margin-top: 25px;
+}
+
+#izquierda{
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    height: calc(100% - 150px);
+}
+
+#area-texto{
+    display: block;
+    width: calc(100% + 300px);
+    height: 300px;
+    border: none;
+    font-size: 25px;
+    font-weight: 400;
+    background: transparent;
+    color: var(--principal);
+    resize: none;
+}
+
+#area-texto:focus{
+    outline: 0px;
+}
+
+#izquierda label{
+    display: block;
+    color: var(--gris);
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    bottom: 170px;
+}
+
+label img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.boton{
+    width: 300px;
+    height: 65px;
+    border-radius: 24px;
+    border-color: var(--principal);
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#boton-encriptar{
+    color: #FFF;
+    background: var(--principal);
+    position: absolute;
+    bottom: 75px;
+}
+#boton-desencriptar{
+    color: var(--gris);
+    background: var(--secundario);
+    position: absolute;
+    bottom: 75px;
+    left: 320px;
+}
+
+
+@media (max-width: 1225px) {
+    #izquierda{
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        height: calc(100% - 150px);
+    }
+}
+
+
+
+
+/*esto es todo lo de la parte derecha*/
+#derecha{
+    width: 400px;
+    height: calc(100% - 80px); 
+    position: absolute; 
+    right: 30px;
+    top: 40px;
+    background: #FFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    
+}
+
+#aparece-primero{
+    text-align: center;
+    align-items: center;
+    
+}
+
+#aparece-primero img{
+    margin-top: 100px;
+}
+
+#aparece-primero h1{
+    color: var(--gris);
+    font-size: 24px;
+    margin-top: 70px;
+    font-weight: 700px;
+    width: 80%;
+    margin-left: 10%;
+}
+#aparece-primero h2{
+    color: var(--gris);
+    font-size: 16px;
+    font-weight: 400px;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+
+#boton-copiar{
+    position: absolute;
+    left: 50px;
+    bottom: 35px;
+    background: white;
+    color: var(--principal);
+}
+
+#area-respuesta{
+    color: var(--principal);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 40px;
+    width: 320px;
+    height: 500px;
+    resize: none;
+    border: none;
+}
+
+#area-respuesta:focus{
+    outline: 0px;
+}
+
+
+@media (max-width: 1080px){
+    #izquierda{
+        display: block;
+        height: 650px;
+    }
+    #derecha{
+        display: block;
+        position: inherit;
+        margin-top: 650px;
+        margin-left: 20px;
+        width: 620px;
+        margin-bottom: 25px;
+    }
+    #derecha img{
+        display: none;
+    }
+
+    #aparece-primero h2{
+        margin-top: 15px;
+        padding-bottom: 25px;
+    }
+    #aparece-primero h1{
+        padding-top: 25px;
+    }
+
+    #area-respuesta{
+        width: 550px;
+    }
+
+    #boton-copiar{
+        display: block;
+        position: absolute;
+        bottom: -580px;
+        left: 195px;
+    }
+}
+
+
+
+
+@media (max-width: 420px){
+    #izquierda {
+        text-align: center;
+    }
+    #izquierda label{
+        position: absolute;
+        bottom: 300px;
+    }
+    .boton{
+        display: block;
+    }
+    #boton-encriptar{
+        position: absolute;
+        bottom: 170px;
+        left: 3%;
+    }
+    #boton-desencriptar{
+        position: absolute;
+        bottom: 75px;
+        left: 3%;
+        
+    }
+    #area-texto{  
+        width: 100%;
+    }
+
+    #derecha{
+        display: block;
+        position: inherit;
+        margin-top: 650px;
+        margin-left: 30px;
+        width: 300px;
+        margin-bottom: 25px;
+    }
+    #derecha img{
+        display: none;
+    }
+
+    #aparece-primero h2{
+        margin-top: 15px;
+        padding-bottom: 25px;
+    }
+    #aparece-primero h1{
+        padding-top: 25px;
+    }
+
+    #area-respuesta{
+        width: 220px;
+        height: 300px;
+    }
+
+    #boton-copiar{
+        display: block;
+        position: initial;
+        margin-bottom: 20px;
+    }
+}
